@@ -1,0 +1,25 @@
+#plans-body tr {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Even, aligned columns in the plans table */
+.responsive-table th,
+.responsive-table td {
+  width: 33.33%;
+}
+
+.responsive-table {
+  table-layout: fixed;
+}

@@ -4,36 +4,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>the-calculator</title>
+  <title>The Calculator</title>
+  <!-- Tailwind (Play CDN): generates CSS from our classes; placed in <head> so styles apply before first paint. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS, override Tailwind using specificity -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <div class="container">
-    <input type="text" class="screen" disabled />
-    <div class="keys">
-      <button class="operator" value="+">+</button>
-      <button class="operator" value="-">-</button>
-      <button class="operator" value="*">&#215;</button>
-      <button class="operator" value="/">&#247;</button>
-      
-      <button value="7">7</button>
-      <button value="8">8</button>
-      <button value="9">9</button>
+<body class="min-h-screen flex items-center justify-center">
+  <div class="calculator w-[325px] border border-gray-300 rounded-2xl p-2">
+    <input type="text"
+      class="screen w-full h-20 rounded-t-[20px] text-5xl border-none bg-transparent text-[#222] text-right pr-5 pl-2.5"
+      disabled />
+    <div class="keys grid grid-cols-4 gap-2.5 p-2.5">
+      <button
+        class="operator h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="+">+</button>
+      <button
+        class="operator h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="-">-</button>
+      <button
+        class="operator h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="*">&#215;</button>
+      <button
+        class="operator h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="/">&#247;</button>
 
-      <button value="4">4</button>
-      <button value="5">5</button>
-      <button value="6">6</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="7">7</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="8">8</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="9">9</button>
 
-      <button value="1">1</button>
-      <button value="2">2</button>
-      <button value="3">3</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="4">4</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="5">5</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="6">6</button>
 
-      <button value="0">0</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="1">1</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="2">2</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="3">3</button>
 
-      <button class="decimal" value=".">.</button>
-      <button class="all-clear" value="all-clear">AC</button>
-      <button class="equal-sign operator" value="=">=</button>
+      <button
+        class="h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value="0">0</button>
+
+      <button
+        class="decimal h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#b6a0a0]/40 active:bg-[#bababa]/40"
+        value=".">.</button>
+      <button
+        class="all-clear h-[60px] rounded-[20px] border border-[#c4c4c4] bg-black/30 text-[2rem] text-[#f8f8f8] hover:bg-[#f17377]/40 active:bg-[#bababa]/40"
+        value="all-clear">AC</button>
+      <button
+        class="equal-sign operator rounded-[20px] border border-[#c4c4c4] text-[2rem] text-[#f8f8f8] h-full bg-[#4e9fd4]/40 hover:bg-[#73f177]/40 col-start-4 row-start-2 row-span-4"
+        value="=">=</button>
     </div>
   </div>
   <script src="script.js"></script>

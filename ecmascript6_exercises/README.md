@@ -4,12 +4,12 @@ Eight JavaScript exercises from the ECMAScript 6 block.
 
 ## Exercises
 
-- `exercise-1.js` — Destructuring assignment
+- `exercise-1.js` — Destructuring
 - `exercise-2.js` — Variable naming
 - `exercise-3.js` — Scope
 - `exercise-4.js` — Object operations
 - `exercise-5.js` — `const` and objects
-- `exercise-6.js` — Sum salaries
+- `exercise-6.js` — Object values and sum
 - `exercise-7.js` — Ternary operator
 - `exercise-8.js` — Multiple ternary operators
 

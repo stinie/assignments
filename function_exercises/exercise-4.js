@@ -36,6 +36,6 @@ calculatorReadButton.addEventListener("click", function () {
   calculator.read();
   // Kept for learning and testing:
   // console.log(calculator);
-  alert("Sum: " +calculator.sum());
+  alert("Sum: " + calculator.sum());
   alert("Multiplication: " + calculator.mul());
 });

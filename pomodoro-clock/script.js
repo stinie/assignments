@@ -23,10 +23,10 @@ start.addEventListener('click', function () {
   if (startTimer === undefined) {
     if (isFresh) {
       // --- fresh run only: load the input into the display ---
-      workMinutes = Number(workMinutesInput.value);
+      workMinutes = getValidMinutes(workMinutesInput);
       wm.innerText = workMinutes;
       ws.innerText = "00";
-      breakMinutes = Number(breakMinutesInput.value);
+      breakMinutes = getValidMinutes(breakMinutesInput);
       bm.innerText = breakMinutes;
       bs.innerText = "00";
       isFresh = false;        // from now on, Start = resume
@@ -38,11 +38,11 @@ start.addEventListener('click', function () {
 })
 
 reset.addEventListener('click', function () {
-  workMinutes = Number(workMinutesInput.value);   // read input fresh
+  workMinutes = getValidMinutes(workMinutesInput);   // read input fresh
   wm.innerText = workMinutes;
   ws.innerText = "00";
 
-  breakMinutes = Number(breakMinutesInput.value);
+  breakMinutes = getValidMinutes(breakMinutesInput);
   bm.innerText = breakMinutes; bs.innerText = "00";
 
   document.getElementById('counter').innerText = 0;
@@ -93,6 +93,7 @@ function timer() {
     bs.innerText = "00";
 
     document.getElementById('counter').innerText++;
+    workDone = false;
   }
 }
 
@@ -111,6 +112,19 @@ function beep() {
   oscillator.start();
   oscillator.stop(ctx.currentTime + 0.5);  // beep lasts 0.5 seconds
 }
+
+//Read an input, clamp it to 1–60 whole minutes, and reflect the fix back
+function getValidMinutes(inputField) {
+  let value = Math.floor(Number(inputField.value));
+  if (isNaN(value) || value < 1) {
+    value = 1;
+  } else if (value > 60) {
+    value = 60;
+  }
+  inputField.value = value;   // correct the box so the user sees what was used
+  return value;
+}
+
 
 //Stop Timer Function
 function stopInterval() {

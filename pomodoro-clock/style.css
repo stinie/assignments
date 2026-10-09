@@ -11,16 +11,34 @@ h1 {
 }
 
 #container {
-    height: 260px;
+    height: 460px;
     /* set a fixed height for the container */
     width: 700px;
     background-color: #F5E4C3;
     margin: 0 auto;
     border: 5px solid #88B169;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+    /* center the column group horizontally */
+    align-content: center;
+    /* center the row group vertically */
+    gap: 18px 28px;
+    /* row-gap  column-gap → your real spacing control */
+    padding: 30px;
+    /* breathing room around the whole grid */
+    box-sizing: border-box;
+    /* keep padding inside your 700px, not added on top */
     /* 3 → 4: this is what creates the top row */
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    /* glossy tomato body */
+    background: radial-gradient(circle at 32% 28%, #ff7a6b 0%, #e8392b 55%, #b01818 100%);
+    /* leaf-green rim */
+    border: 6px solid #2f7d32;
+    border-radius: 46% 54% 48% 52% / 42% 44% 56% 58%;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
 }
 
 /*timers*/
@@ -34,15 +52,43 @@ h1 {
 
 #settings {
     grid-area: 1 / 3 / 1 / 3;
-    /* row 1, middle column */
     align-self: center;
     justify-self: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    /* label | input */
+    column-gap: 8px;
+    row-gap: 6px;
+    align-items: center;
+    justify-items: start;
+}
+
+#settings label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#settings input {
+    width: 55px;
+    padding: 4px 6px;
+    font-size: 16px;
+    border: 2px solid #88B169;
+    border-radius: 6px;
+    text-align: center;
 }
 
 /* labels: row 1 → 2 */
-#work   { grid-area: 2 / 2 / 2 / 2; }
-#cycles { grid-area: 2 / 3 / 2 / 3; }
-#break  { grid-area: 2 / 4 / 2 / 4; }
+#work {
+    grid-area: 2 / 2 / 2 / 2;
+}
+
+#cycles {
+    grid-area: 2 / 3 / 2 / 3;
+}
+
+#break {
+    grid-area: 2 / 4 / 2 / 4;
+}
 
 .timer {
     display: flex;
@@ -59,23 +105,48 @@ p {
 }
 
 /* timers: row 2 → 3 */
-#work-timer  { grid-area: 3 / 2 / 3 / 2; }
-#counter     { grid-area: 3 / 3 / 3 / 3; }
-#break-timer { grid-area: 3 / 4 / 3 / 4; }
+#work-timer {
+    grid-area: 3 / 2 / 3 / 2;
+}
+
+#counter {
+    grid-area: 3 / 3 / 3 / 3;
+}
+
+#break-timer {
+    grid-area: 3 / 4 / 3 / 4;
+}
 
 /*buttons*/
 
 .btn {
     align-self: center;
     justify-self: center;
-
     width: 100px;
     height: 30px;
-
     font-size: 20px;
+    background-color: #88B169;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #6f9654;
+    /* a slightly darker green */
 }
 
 /* buttons: row 3 → 4 */
-#start { grid-area: 4 / 2 / 4 / 2; }
-#reset { grid-area: 4 / 3 / 4 / 3; }
-#stop  { grid-area: 4 / 4 / 4 / 4; }
+#start {
+    grid-area: 4 / 2 / 4 / 2;
+}
+
+#reset {
+    grid-area: 4 / 3 / 4 / 3;
+}
+
+#stop {
+    grid-area: 4 / 4 / 4 / 4;
+}

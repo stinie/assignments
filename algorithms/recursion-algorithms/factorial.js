@@ -3,10 +3,29 @@
  * Category: Recursion Algorithms
  * Exercise: Factorial — Recursive vs. Iterative
  *
- * Goal: Calculate the factorial of a number using two approaches:
+ * GOAL
+ * Calculate the factorial of a number using two approaches:
  * recursion (a function calling itself) and iteration (a loop).
  *
- * Note: This exercise focuses on understanding the algorithms.
+ * REASONING — RECURSIVE
+ * 1. Check whether the number is 0 or 1.
+ * 2. If so, return 1. This is the base case.
+ * 3. Otherwise, multiply the number by the factorial
+ *    of the number before it.
+ * 4. Keep calling the function with a smaller number
+ *    until the base case is reached.
+ * 5. Return the results back through the function calls.
+ *
+ * REASONING — ITERATIVE
+ * 1. Start with a result of 1.
+ * 2. Start counting backwards from the given number.
+ * 3. Multiply the result by the current number.
+ * 4. Decrease the counter by 1.
+ * 5. Repeat until the counter is smaller than 2.
+ * 6. Return the final result.
+ *
+ * NOTE
+ * This exercise focuses on understanding the algorithms.
  * I use fixed numbers and console.log() to test the functions,
  * without browser input, parsing, or input validation.
  */

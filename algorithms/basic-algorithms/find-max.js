@@ -5,40 +5,24 @@ EXERCISE: Find Max
 FILE: find-max.js
 
 GOAL
-Find and return the largest number in an array.
-The solution must also work when the array contains
-negative numbers or zero.
+Find and return the largest number in an array,
+including arrays containing negative numbers or zero.
 
 REASONING
-1. Create a function that receives an array called numbers.
+1. Receive an array called numbers.
 
-2. We need to remember the largest number found so far.
-   This value may change as we examine the array,
-   so we use let instead of const.
-
-3. Initialize maximum with the first element:
+2. Store the first element in a variable called maximum:
 
    let maximum = numbers[0];
 
-   We do NOT initialize maximum with 0.
+   I initially considered starting with 0, but realized
+   this would fail if all numbers were negative.
+   I use let because maximum may change.
 
-   WHY?
-   If every number in the array is negative, 0 would
-   incorrectly remain the maximum, even though 0
-   does not appear in the array.
+3. Use a for loop starting at index 1 because
+   the first element is already stored in maximum.
 
-4. Use a for loop to walk through the array.
-
-   Start at index 1 because we have already used
-   the element at index 0 to initialize maximum.
-
-   numbers.length tells us how many elements
-   the array contains.
-
-5. During each iteration, numbers[i] represents
-   the current element we are examining.
-
-6. Compare the current element with maximum:
+4. Compare each remaining element with maximum:
 
    if (numbers[i] > maximum)
 
@@ -46,48 +30,32 @@ REASONING
 
    maximum = numbers[i];
 
-7. If the current number is NOT larger, do nothing.
-   There is no need for an else statement.
+5. If the current number is not larger, keep maximum.
+   No else statement is needed.
 
-8. Continue until every remaining element
-   has been examined.
+6. Return maximum after the loop finishes,
+   so every element has been examined.
 
-9. Return maximum AFTER the loop has finished,
-   but still INSIDE the function.
-
-   Returning inside the loop would stop the search
-   before we had examined all the numbers.
-
-IMPORTANT DISTINCTIONS
-- numbers is the function parameter: the incoming array.
-- numbers[i] is one element of that array.
-- i is the index that keeps track of our current position.
-- maximum remembers the largest value encountered so far.
-- We use let because maximum may need to be reassigned.
-- Unlike map(), we are NOT creating a new array.
-- We return one value: the largest number.
-
-ASSUMPTION
-The input array contains at least one number.
-An empty array would need separate handling.
+NOTE
+- numbers is the incoming array.
+- numbers[i] is the element at the current index.
+- numbers.length is the number of elements.
+- maximum remembers the largest number found so far.
+- Unlike map(), this function returns one number,
+  not a new array.
+- The input array is assumed to contain at least one number.
 
 MENTAL MODEL
-Imagine a child walking along a row of number cards.
+A child walks along a row of number cards,
+holding a sign showing the largest number seen so far.
 
-The child carries a sign that says:
-"Largest number I have seen so far."
-
-The child starts by writing the first number
-on the sign.
+The first number goes on the sign.
 
 At each following card, the child asks:
-"Is this number bigger than the number on my sign?"
+"Is this number bigger than the one on my sign?"
 
-YES -> Replace the number on the sign.
+YES -> Update the sign.
 NO  -> Keep the sign unchanged.
-
-Only after examining every card does the child
-announce the largest number.
 
 The loop manages the walk.
 The if statement decides whether to update the sign.

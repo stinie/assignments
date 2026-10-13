@@ -1,7 +1,7 @@
 /*
 MODULE: Algorithms in JavaScript
 CATEGORY: Basic Algorithms
-EXERCISE:  
+EXERCISE: Palindrome Checker
 FILE: palindrome-checker.js
 
 GOAL

@@ -16,6 +16,8 @@ conditions, arrays, and basic calculations.
 7. **Eliminate the Negatives** — `eliminate-negatives.js`
 8. **Number to String** — `number-to-string.js`
 9. **N3rd Highest Number in Array** — `third-highest-number.js`
+10. **Palindrome Checker** — `palindrome-checker.js`
+
 
 Each JavaScript file includes comments documenting the
 algorithm, reasoning, and learning discoveries.

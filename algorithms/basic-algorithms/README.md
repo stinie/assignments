@@ -17,6 +17,8 @@ conditions, arrays, and basic calculations.
 8. **Number to String** — `number-to-string.js`
 9. **N3rd Highest Number in Array** — `third-highest-number.js`
 10. **Palindrome Checker** — `palindrome-checker.js`
+10. **Fibonacci** — `fibonacci.js`
+
 
 
 Each JavaScript file includes comments documenting the

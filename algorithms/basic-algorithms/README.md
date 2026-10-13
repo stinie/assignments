@@ -15,6 +15,7 @@ conditions, arrays, and basic calculations.
 6. **Get Average** — `get-average.js`
 7. **Eliminate the Negatives** — `eliminate-negatives.js`
 8. **Number to String** — `number-to-string.js`
+9. **N3rd Highest Number in Array** — `third-highest-number.js`
 
 Each JavaScript file includes comments documenting the
 algorithm, reasoning, and learning discoveries.

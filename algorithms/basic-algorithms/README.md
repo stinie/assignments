@@ -17,7 +17,13 @@ conditions, arrays, and basic calculations.
 8. **Number to String** — `number-to-string.js`
 9. **N3rd Highest Number in Array** — `third-highest-number.js`
 10. **Palindrome Checker** — `palindrome-checker.js`
-10. **Fibonacci** — `fibonacci.js`
+11. **Fibonacci** — `fibonacci.js`
+12. **FizzBuzz** — `fizzbuzz.js`
+13. **Addition** — `addition.js`
+14. **Factorialize!** — `factorialize.js`
+15. **Shift the Values** — `shift-the-values.js`
+16. **Communist Censorship** — `communist-censorship.js`
+17. **Remove the Negative** — `remove-the-negative.js`
 
 
 

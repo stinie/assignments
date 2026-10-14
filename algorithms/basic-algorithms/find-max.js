@@ -78,3 +78,21 @@ const y = [2, -3, 5, -1];
 
 console.log(findMax(x)); // 2
 console.log(findMax(y)); // 5
+
+/*
+💡 DISCOVERY — BUILT-IN ALTERNATIVE
+I wanted to explore another way to find the maximum
+using JavaScript's built-in Math.max() function.
+
+The spread syntax (...numbers) passes the array elements
+as individual arguments to Math.max().
+
+I can declare maximum again because the variable inside
+findMax() has its own function scope.
+*/
+
+const numbers = [2, 8, 3, 11, 5];
+
+const maximum = Math.max(...numbers);
+
+console.log(maximum); // 11

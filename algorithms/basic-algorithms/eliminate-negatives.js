@@ -64,3 +64,39 @@ const x = [2, -1, 4, -3];
 const y = [-2, -1, 14, -3, 0];
 console.log(replaceNegatives(x)); //  [2, 0, 4, 0]  
 console.log(replaceNegatives(y)); //  [0, 0, 14, 0, 0]
+
+/*
+💡 ALTERNATIVE — FOR LOOP AND SPLICE
+
+I wanted to explore the alternative shown in the course video.
+
+splice() changes the original array, unlike map(),
+which creates a new array.
+
+SYNTAX
+array.splice(startIndex, deleteCount, replacement)
+
+In this example:
+- i tells splice() where to start.
+- 1 means remove one element.
+- 0 is the replacement value.
+
+MENTAL MODEL
+A child walks along a row of number cards.
+
+Whenever the child finds a negative number,
+they take that card away and put a card with 0
+in exactly the same position.
+
+The row keeps the same number of cards.
+*/
+
+const numbersToChange = [2, -1, 4, -3, -2];
+
+for (let i = 0; i < numbersToChange.length; i++) {
+  if (numbersToChange[i] < 0) {
+    numbersToChange.splice(i, 1, 0);
+  }
+}
+
+console.log(numbersToChange); // [2, 0, 4, 0, 0]

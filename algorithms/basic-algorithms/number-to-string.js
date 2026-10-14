@@ -78,3 +78,35 @@ console.log(replaceNegativesWithTuring(x));
 // [1, "Turing", 0, "Turing"]
 console.log(replaceNegativesWithTuring(y));
 // [10, "Turing", 0, 11, "Turing"]
+
+/*
+ALTERNATIVE — USING SPLICE
+
+Replace every negative number with the string "turing".
+
+splice() modifies the original array.
+
+SYNTAX
+array.splice(startIndex, deleteCount, replacement)
+
+Here, splice(i, 1, "turing") removes the negative
+number at index i and inserts "turing" in its place.
+
+The array keeps the same length.
+*/
+
+function numberToString(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) {
+      // arr[i] = "turing"; // Direct replacement
+      arr.splice(i, 1, "turing"); // Replacement using splice()
+    }
+  }
+
+  return arr;
+}
+
+const z = [2, -1, 4, -3, -2];
+
+console.log(numberToString(z));
+// [2, "turing", 4, "turing", "turing"]

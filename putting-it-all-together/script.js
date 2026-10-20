@@ -7,7 +7,8 @@ FILE: script.js
 
 GOAL
 Practice classes, objects, callbacks, the this keyword,
-Promises, and displaying JavaScript results in HTML.
+Promises, basic error handling in the console,
+and displaying successful results in HTML.
 
 REASONING
 1. Define a Person class with a constructor
@@ -22,12 +23,14 @@ REASONING
    to display the person's introduction.
 
 5. Create wait(milliseconds), returning a Promise
-   that resolves after the specified delay.
+   that resolves after a valid delay or rejects
+   when the delay is negative.
 
 6. Use .then() to display the resolved value.
+   Use .catch() to handle Promise errors.
 
-7. Use querySelector() and textContent to show
-   the results on the webpage as well as in the console.
+7. Display successful results in the browser.
+   Practise error handling in the console.
 
 💡 DISCOVERY
 A class defines the blueprint.
@@ -64,8 +67,21 @@ The Promise resolves independently of .then().
 .then() lets me react to its fulfilled value
 and display visible feedback.
 
+ERROR HANDLING — CONSOLE PRACTICE
+throw signals an error.
+try...catch handles a synchronous error.
+
+reject() rejects a Promise.
+.catch() handles a Promise rejection.
+
+I practise error handling in the console,
+without adding error messages to the HTML.
+
+The document object is available in the browser,
+but not in Node.js by default.
+
 Connecting JavaScript to HTML helped me see
-the results directly in the browser.
+the successful results directly in the browser.
 
 Understanding the individual pieces first helped
 me connect them and complete the assignment.
@@ -87,19 +103,39 @@ class Person {
 const person1 = new Person("Christine", 54);
 
 function describePerson(callback) {
+  if (typeof callback !== "function") {
+    throw new TypeError("Callback must be a function.");
+  }
+
   callback.call(person1);
 }
 
 function showIntroduction() {
-  console.log(this.introduce()); // Keep for learning purposes
-  document.querySelector("#introduction").textContent = this.introduce();
+  const introduction = this.introduce();
+
+  console.log(introduction); // Keep for learning purposes
+
+  // Display in HTML only when running in a browser
+  if (typeof document !== "undefined") {
+    document.querySelector("#introduction").textContent = introduction;
+  }
 }
 
-describePerson(showIntroduction);
+// Handle callback errors in the console
+try {
+  describePerson(showIntroduction);
+} catch (error) {
+  console.error("Introduction error:", error.message);
+}
 
 // Exercise 3: Return a Promise that resolves after the given delay
 function wait(milliseconds) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
+    if (milliseconds < 0) {
+      reject(new Error("Delay cannot be negative."));
+      return;
+    }
+
     setTimeout(() => {
       resolve("Wait is finished!");
     }, milliseconds);
@@ -107,9 +143,15 @@ function wait(milliseconds) {
 }
 
 // Test the Promise
+wait(1000)
+  .then((message) => {
+    console.log(message); // Keep for learning purposes
 
-
-wait(1000).then((message) => {
-  console.log(message); // Keep for learning purposes
-  document.querySelector("#promise-result").textContent = message;
-});
+    // Display in HTML only when running in a browser
+    if (typeof document !== "undefined") {
+      document.querySelector("#promise-result").textContent = message;
+    }
+  })
+  .catch((error) => {
+    console.error("Promise error:", error.message);
+  });

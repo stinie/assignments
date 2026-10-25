@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Search GIPHY and explore a collection of GIFs.">
+  <title>GIPHY GIF Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">A little motion for your day</p>
+      <h1>GIF Finder<span>.</span></h1>
+      <p class="intro">Search GIPHY and find the perfect GIF for the moment.</p>
+    </header>
+
+    <form class="search-form" id="search-form">
+      <label class="visually-hidden" for="search-input">Search for GIFs</label>
+      <input
+        id="search-input"
+        name="query"
+        type="search"
+        placeholder="Try “happy cat” or “dancing”"
+        autocomplete="off"
+        required>
+      <button type="submit" id="search-button">Search</button>
+    </form>
+
+    <p class="status" id="status" role="status" aria-live="polite">
+      Search for something to get started.
+    </p>
+
+    <section
+      class="results"
+      id="results"
+      aria-label="GIF search results"></section>
+
+    <button class="load-more" id="load-more" type="button" hidden>
+      Load more
+    </button>
+
+    <footer class="footer">
+      Powered by <a href="https://giphy.com/" target="_blank" rel="noreferrer">GIPHY</a>
+      · Typography by <a href="https://commitmono.com/" target="_blank" rel="noreferrer">Commit Mono</a>
+    </footer>
+  </main>
+</body>
+
+</html>

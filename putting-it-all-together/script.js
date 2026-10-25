@@ -1,4 +1,3 @@
-
 /*
 MODULE: Object-Oriented Programming
 CATEGORY: JavaScript ES6

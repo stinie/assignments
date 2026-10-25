@@ -24,9 +24,9 @@ The application provides a simple index of my coding projects, assignments, and 
 
 ### Learning & Testing
 
-I explored how `async` and `await` complement each other, API error handling, and GitHub's rate limits.
+Explored how `async` and `await` complement each other, along with API error handling and GitHub's rate limits.
 
-I tested the responsive layout locally using browser DevTools at different viewport sizes.
+Tested the responsive layout locally using browser DevTools at different viewport sizes.
 
 ### Files
 
@@ -38,7 +38,8 @@ I tested the responsive layout locally using browser DevTools at different viewp
 
 I am learning to integrate **Codex** into my local development workflow alongside my code editor. I use AI as a learning companion to strengthen my own reasoning and discernment, explore technical approaches, troubleshoot problems, and communicate my understanding more clearly and concisely in English.
 
-- [GitHub REST API](https://docs.github.com/en/rest)
+- [GitHub REST API](https://docs.github.com/en/rest) — Retrieving repository contents
+- [Bootstrap](https://getbootstrap.com/) — Layout and responsive utilities
 - [Commit Mono](https://commitmono.com/) — Typography
 
 ### Progress

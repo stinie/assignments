@@ -1,0 +1,69 @@
+@import url("https://cdn.jsdelivr.net/fontsource/css/commit-mono@5.3.0/index.css");
+
+:root {
+  --page-background: #f6f7f5;
+  --card-background: #ffffff;
+  --text-color: #24332b;
+  --accent-color: #32684e;
+  --border-color: #e4e9e5;
+}
+
+body {
+  font-family: "Commit Mono", monospace;
+  background: var(--page-background);
+  color: var(--text-color);
+}
+
+.eyebrow {
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.library-card {
+  padding: 1.25rem;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgb(36 51 43 / 5%);
+}
+
+.table thead th {
+  color: #68756d;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.table > :not(caption) > * > * {
+  border-bottom-color: var(--border-color);
+}
+
+.assignment-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.assignment-link:hover {
+  text-decoration: underline;
+}
+
+main.container {
+  max-width: 800px;
+}
+
+/* 
+Here, max-width: 575.98px refers to the viewport width, not the width of your container.
+It means: Apply these CSS rules only when the browser viewport is 575.98 pixels wide or narrower.
+*/
+@media (max-width: 575.98px) {
+  main.container {
+    padding-top: 2rem !important;
+  }
+
+  .library-card {
+    padding: 1rem;
+  }
+
+}

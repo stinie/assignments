@@ -1,0 +1,146 @@
+{
+  "airbnb": [
+    "🏠",
+    "🛏️",
+    "🧳",
+    "🌍"
+  ],
+  "algorithms": [
+    "🧮",
+    "🧩",
+    "🔁",
+    "🔢"
+  ],
+  "array_processing_exercises": [
+    "📚",
+    "🔍",
+    "🔢",
+    "🗂️"
+  ],
+  "bootstrap": [
+    "🧱",
+    "📐",
+    "📱",
+    "🎨"
+  ],
+  "bring-everything-together": [
+    "📝",
+    "✅",
+    "📊",
+    "🧩"
+  ],
+  "code-validation": [
+    "✅",
+    "🔍",
+    "🛠️",
+    "📄"
+  ],
+  "craigslist": [
+    "📰",
+    "🏷️",
+    "🛒",
+    "📍"
+  ],
+  "dom-manipulation": [
+    "🌳",
+    "🖱️",
+    "📝",
+    "🎨"
+  ],
+  "ecmascript6_exercises": [
+    "📦",
+    "🔀",
+    "🧩",
+    "💻"
+  ],
+  "evil-hacker": [
+    "🥊",
+    "🏆",
+    "💪",
+    "📰"
+  ],
+  "final-front-end-project": [
+    "📚",
+    "🗂️",
+    "🔗",
+    "💻"
+  ],
+  "fix-indentation": [
+    "📐",
+    "📄",
+    "🧹",
+    "🛠️"
+  ],
+  "function_exercises": [
+    "⚙️",
+    "➡️",
+    "🔁",
+    "🧮"
+  ],
+  "giphy-gif": [
+    "🎞️",
+    "🔍",
+    "🖼️",
+    "▶️"
+  ],
+  "google": [
+    "🔍",
+    "🌐",
+    "📄",
+    "⌨️"
+  ],
+  "linkedin": [
+    "💼",
+    "🤝",
+    "👔",
+    "📝"
+  ],
+  "materialize": [
+    "🎨",
+    "🧱",
+    "📐",
+    "📱"
+  ],
+  "my-first-framework-website": [
+    "🧱",
+    "🏗️",
+    "🌐",
+    "📱"
+  ],
+  "my-first-website": [
+    "🌱",
+    "🌐",
+    "📄",
+    "🔗"
+  ],
+  "pomodoro-clock": [
+    "🍅",
+    "⏱️",
+    "⏰",
+    "☕"
+  ],
+  "putting-it-all-together": [
+    "🧩",
+    "📦",
+    "🔁",
+    "⏳"
+  ],
+  "the-calculator": [
+    "🧮",
+    "➕",
+    "➖",
+    "✖️"
+  ],
+  "twitter": [
+    "🐦",
+    "💬",
+    "🔐",
+    "👤"
+  ],
+  "vanilla-javascript": [
+    "💻",
+    "⚙️",
+    "🔁",
+    "🌳"
+  ]
+}
